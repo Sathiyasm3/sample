@@ -3,7 +3,7 @@
 #include <ctime>
 #include <cmath>
 #include <string>
-#include<chrono>
+#include <chrono>
 
 using namespace std;
 using namespace std::chrono;
@@ -42,6 +42,9 @@ int main() {
                 auto duration = duration_cast<seconds>(end - start).count();
                 cout << "✅ Access granted! Welcome! 🎉" << endl;
                 cout << "Time taken: " << duration << " seconds" << endl<<"Total attempts: "<<attempts<<endl;
+                time_t timestamp;
+                time(&timestamp);
+                cout << ctime(&timestamp)<<"exiting....";
             } else {
                 throw(nn);
             }
@@ -65,7 +68,7 @@ int main() {
 
     } while (n!=nn);
 
-
     return 0;
 }
 
+~                       
